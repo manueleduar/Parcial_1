@@ -26,7 +26,17 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
     v) Agregar el elmento como hijo del div "dummy". 
 */
 
-// CREA TU FUNCION challenge1 aqui:
+function challenge1() {
+    var n = prompt('Cuantos botones desea agregar???');
+
+    for (var i = 0; i<n; i++) {
+        console.log((nombres[i]));
+        var boton = document.createElement("boton");
+        boton.textContent = nombres[i] + ' ';
+        document.getElementById("dummy").appendChild(boton);
+
+    }
+}
 
 
 
@@ -36,7 +46,11 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 // CREA TU FUNCION challenge2 2 aquí.
 
-
+function challenge2() {
+    for (var i = 0; i<nombres.length; i++) {
+        console.log(nombres[i].toLocaleUpperCase())
+    }
+}
 
 /*
 
@@ -68,6 +82,25 @@ Deberia escribir en consola
 */
 
 // CREA TU FUNCION printInfo() AQUI
+var Dog = function(nombre, color, raza){
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+
+  this.printInfo = function(){
+      console.log("Nombre: " + this.nombre +",De color: " +this.color +", Raza: "+ this.raza);
+  }
+};
+
+function challenge3( ){
+    var tobias = new Dog("tobias", "Negro", "Snauser");
+    var algie = new Dog("algie", "Blanco", "Chihuaha");
+    var bobby = new Dog("bobby", "negro", "Shitzu");
+
+    tobias.printInfo();
+    algie.printInfo();
+    bobby.printInfo();
+}
 
 
 
@@ -80,7 +113,7 @@ Deberia escribir en consola
 
     <button onclick="challenge1()">Challenge 1</button>
     <button onclick="challenge2()">Challenge 2</button>
-    <button onclick="challenge3()">Challenge 2</button>
+    <button onclick="challenge3()">Challenge 3</button>
 
   
 <div id = "dummy">

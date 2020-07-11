@@ -1,37 +1,55 @@
 header {
-
-
+  justify-content: space-evenly;
+  display: flex;
 }
 
 
 h2 {
+  margin: 10px;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
 
 }
 
 .nav {
 
+  display: flex;
 
   }
 
   li {
 
+    text-align: center;
+    margin: 10px;
+    width: 100%;
 
   }
 
   .content{
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
   .aside {
-
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 20%;
   }
 
   .slidebox{
-
+    height : 100%;
    
   }
 
   .article{
+    flex-grow: 4;
+    width: 60%;
 
   }
 
@@ -45,9 +63,13 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
+      flex-grow: 2;
+      width: 66%;
+      flex-direction: column;
 
   } 
 header{
+  display: none;
 
 }
 }
@@ -56,17 +78,24 @@ header{
 @media (max-width:599px) {
 
 header,.content{
+  display: none;
 
 }
 
 .nav {
 
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 
   }
 
 
 .nav > li {
-
+  align-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
 }
 
 
